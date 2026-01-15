@@ -1,0 +1,37 @@
+names = ["Me", "Lia", "Jake"]
+
+steps = [
+    [4500, 5200, 4800, 5000, 5300],
+    [4000, 4100, 3900, 4200, 4600],
+    [6000, 5800, 5900, 6100, 6200]
+]
+
+total_steps = []
+
+for i in range(len(steps)):
+    total = 0
+    for x in range(len(steps[i])):
+        total = total + steps[i][x]
+    total_steps.append(total)
+    print(names[i], "'s total steps is =", total)
+
+highest = total_steps[0]
+lowest = total_steps[0]
+highest_index = 0
+
+for i in range(len(total_steps)):
+    if total_steps[i] > highest:
+        highest = total_steps[i]
+        highest_index = i
+    if total_steps[i] < lowest:
+        lowest = total_steps[i]
+
+print("The person with the most total steps is", names[highest_index], "with a step count of", highest)
+
+step_gap = highest - lowest
+print("The gap between the lowest and the highest amount of steps taken is", step_gap)
+
+
+
+
+
