@@ -1,0 +1,28 @@
+names = ["Me", "Lia", "Jake"]
+
+steps = [
+    [4500, 5200, 4800, 5000, 5300],
+    [4000, 4100, 3900, 4200, 4600],
+    [6000, 5800, 5900, 6100, 6200]
+]
+
+weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+
+totals_in_each_day= []
+
+for x in range(len(steps[0])):
+    total = 0
+    for i in range(len(steps)):
+        total = total + steps[i][x]
+    totals_in_each_day.append(total)
+    print(days[x], "had a total of", total, "steps")
+
+max_day = 0
+max_steps = totals_in_each_day[0]
+
+for x in range(len(totals_in_each_day)):
+    if totals_in_each_day[x] > max_steps:
+        max_steps = totals_in_each_day[x]
+        max_day = x
+
+print("The weekday that's got the most activity is", days[max_day], "& there were", max_steps, "steps taken on that day")
