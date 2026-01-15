@@ -1,0 +1,28 @@
+#These are the match stats of 5 playoff games of a specific team for the Soccer World Cup
+#The rows represent different matches
+#The columns represent: GOALS, FOULS, SAVES
+matches_stats = [
+    [2, 1, 5],
+    [3, 2, 4],
+    [1, 1, 6],
+    [4, 3, 2],
+    [3, 0, 3]
+]
+
+#Access specific value
+print(matches_stats[1][0])
+
+#Update goals in match 3
+matches_stats[2][0] = 2
+
+#Total of the data set
+total_goals = 0
+
+for match in team_stats:
+    total_goals = total_goals + match[0]
+print(total_goals)
+
+#Reflection
+#I picked football/soccer matches because the stats per game are very easy to find and you need to change them throughout the matches
+#These stats are also commonly used to help teams find their weaknesses and strength in real life situations. 
+#The use of the 2D array really helped me in organizing and seperating the values of each map in a clean and tidy way. 
